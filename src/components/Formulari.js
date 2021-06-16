@@ -66,4 +66,6 @@ Formulari.propTypes = {
     nom: PropTypes.string.isRequired,
     utilitat: PropTypes.string.isRequired,
   }),
+  setVisible: PropTypes.func,
+  setEditar: PropTypes.func,
 };

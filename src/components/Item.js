@@ -53,4 +53,5 @@ Item.propTypes = {
   }).isRequired,
   items: PropTypes.array.isRequired,
   setItems: PropTypes.func.isRequired,
+  visible: PropTypes.bool.isRequired,
 };

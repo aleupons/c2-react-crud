@@ -26,4 +26,5 @@ export const Llista = (props) => {
 Llista.propTypes = {
   items: PropTypes.array.isRequired,
   setItems: PropTypes.func.isRequired,
+  visible: PropTypes.bool.isRequired,
 };
