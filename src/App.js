@@ -17,7 +17,7 @@ function App() {
     <>
       <h1>Kit d'autodefensa</h1>
       <Formulari />
-      <Llista />
+      <Llista items={items} />
     </>
   );
 }

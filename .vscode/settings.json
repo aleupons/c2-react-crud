@@ -1,0 +1,10 @@
+{
+  "emmet.excludeLanguages": [
+  "#/definitions/common/properties/internalConsoleOptions"
+    "markdown"
+  ],
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  }
+}
