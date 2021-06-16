@@ -20,8 +20,13 @@ function App() {
       <button className="btn btn-primary" onClick={() => setVisible(!visible)}>
         Afegir ítem
       </button>
-      <Formulari items={items} setItems={setItems} visible={visible} />
-      <Llista items={items} />
+      <Formulari
+        items={items}
+        setItems={setItems}
+        visible={visible}
+        setVisible={setVisible}
+      />
+      <Llista items={items} setItems={setItems} visible={visible} />
     </div>
   );
 }
