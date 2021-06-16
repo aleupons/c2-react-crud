@@ -1,6 +1,6 @@
 {
   "emmet.excludeLanguages": [
-  "#/definitions/common/properties/internalConsoleOptions"
+    "#/definitions/common/properties/internalConsoleOptions",
     "markdown"
   ],
   "emmet.triggerExpansionOnTab": true,
