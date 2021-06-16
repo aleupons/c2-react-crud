@@ -7,9 +7,7 @@ export const Llista = (props) => {
     <>
       <h2>Llista d'objectes necessaris</h2>
       <ul>
-        {items.map((item) => (
-          <Item key={item.id} item={item} />
-        ))}
+        {items.map((item) => <Item key={item.id} item={item} />).reverse()}
       </ul>
     </>
   );

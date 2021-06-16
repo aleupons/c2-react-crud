@@ -5,9 +5,11 @@ export const Item = (props) => {
     item: { nom, utilitat },
   } = props;
   return (
-    <ul>
-      <li>{nom}</li>
-      <li>Utilitat: {utilitat}</li>
+    <ul className="list-unstyled ">
+      <li className="d-flex flex-column">
+        <span className="nom">{nom}</span>
+        <span className="utilitat">Utilitat: {utilitat}</span>
+      </li>
     </ul>
   );
 };

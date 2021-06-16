@@ -13,12 +13,16 @@ function App() {
       utilitat: "Debilitar policies i estómacs",
     },
   ]);
+  const [visible, setVisible] = useState(false);
   return (
-    <>
+    <div className="container-fluid">
       <h1>Kit d'autodefensa</h1>
-      <Formulari />
+      <button className="btn btn-primary" onClick={() => setVisible(!visible)}>
+        Afegir ítem
+      </button>
+      <Formulari items={items} setItems={setItems} visible={visible} />
       <Llista items={items} />
-    </>
+    </div>
   );
 }
 
