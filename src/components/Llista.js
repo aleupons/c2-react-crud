@@ -4,9 +4,11 @@ import { PropTypes } from "prop-types";
 export const Llista = (props) => {
   const { items, setItems, visible } = props;
   return (
-    <>
-      <h2>Llista d'objectes necessaris per anar a la manifa</h2>
-      <ul>
+    <div className="row">
+      <h2 className="titol col-12">
+        Llista d'objectes necessaris per anar a la manifa
+      </h2>
+      <ul className="col flex-column">
         {items
           .map((item) => (
             <Item
@@ -19,7 +21,7 @@ export const Llista = (props) => {
           ))
           .reverse()}
       </ul>
-    </>
+    </div>
   );
 };
 

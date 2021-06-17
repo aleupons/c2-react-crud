@@ -10,6 +10,9 @@ export const Formulari = (props) => {
   const [newItem, setNewItem] = useState(itemInicial);
   const afegirItem = (e) => {
     e.preventDefault();
+    if (newItem.nom === "") {
+      return;
+    }
     setItems([...items, { ...newItem, id: items.length + 1 }]);
     setNewItem(itemInicial());
     setVisible(!visible);
@@ -29,31 +32,41 @@ export const Formulari = (props) => {
     setEditar(false);
   };
   return (
-    <form onSubmit={item ? modificarItem : afegirItem} hidden={!visible}>
-      <div className="form-group">
-        <label htmlFor="nom">Estri:</label>
-        <input
-          className="form-control"
-          type="text"
-          id="nom"
-          value={newItem.nom}
-          onChange={(e) => setNewItem({ ...newItem, nom: e.target.value })}
-        />
+    <div className="row">
+      <div className="col-8">
+        <form
+          className="formulari"
+          onSubmit={item ? modificarItem : afegirItem}
+          hidden={!visible}
+        >
+          <div className="form-group">
+            <label htmlFor="nom">Estri:</label>
+            <input
+              className="form-control"
+              type="text"
+              id="nom"
+              value={newItem.nom}
+              onChange={(e) => setNewItem({ ...newItem, nom: e.target.value })}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="utilitat">Utilitat:</label>
+            <input
+              className="form-control"
+              type="text"
+              id="utilitat"
+              value={newItem.utilitat}
+              onChange={(e) =>
+                setNewItem({ ...newItem, utilitat: e.target.value })
+              }
+            />
+          </div>
+          <button type="submit" className="btn btn-success">
+            Acceptar
+          </button>
+        </form>
       </div>
-      <div className="form-group">
-        <label htmlFor="utilitat">Utilitat:</label>
-        <input
-          className="form-control"
-          type="text"
-          id="utilitat"
-          value={newItem.utilitat}
-          onChange={(e) => setNewItem({ ...newItem, utilitat: e.target.value })}
-        />
-      </div>
-      <button type="submit" className="btn btn-success">
-        Acceptar
-      </button>
-    </form>
+    </div>
   );
 };
 

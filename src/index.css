@@ -1,3 +1,42 @@
+/* CSS HEX */
+:root {
+  --xiketic: #03071eff;
+  --dark-sienna: #370617ff;
+  --rosewood: #6a040fff;
+  --dark-red: #9d0208ff;
+  --rosso-corsa: #d00000ff;
+  --vermilion: #dc2f02ff;
+  --persimmon: #e85d04ff;
+  --carrot-orange: #f48c06ff;
+  --orange-web: #faa307ff;
+  --selective-yellow: #ffba08ff;
+}
+body {
+  background-color: var(--selective-yellow);
+  color: var(--xiketic);
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: large;
+}
+.container {
+  background-color: var(--orange-web);
+}
 .utilitat {
   padding-left: 10px;
+}
+.afegir {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+.formulari {
+  margin-bottom: 15px;
+}
+.titol {
+  margin-bottom: 20px;
+}
+ul li {
+  border: 5px solid var(--dark-red);
+  padding: 10px;
+  margin-bottom: 2px;
 }
